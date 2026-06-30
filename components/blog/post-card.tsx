@@ -1,32 +1,25 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HoverScaleImage } from "@/components/motion/hover-scale-image";
-import { getCategoryMeta } from "@/lib/categories";
 import { formatPrice } from "@/lib/utils";
 import type { BlogPost } from "@/types/blog";
 
 export function PostCard({ post, priority = false }: { post: BlogPost; priority?: boolean }) {
-  const category = getCategoryMeta(post.category);
   const cover = post.images[0];
 
   return (
     <article className="group">
       <Link href={`/blog/${post.slug}`} className="block">
-        <div className="relative">
-          <HoverScaleImage
-            src={cover.url}
-            alt={cover.alt}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={priority}
-            className="aspect-[3/4] rounded-sm"
-          />
-          <span className="absolute top-3 left-3 rounded-full bg-cream-50/95 px-3 py-1 text-xs tracking-wide text-charcoal-900">
-            {category.label}
-          </span>
-        </div>
+        <HoverScaleImage
+          src={cover.url}
+          alt={cover.alt}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={priority}
+          className="aspect-[4/3] rounded-sm shadow-sm transition-shadow duration-300 group-hover:shadow-md"
+        />
 
         <div className="mt-5">
-          <h3 className="font-display text-2xl leading-tight text-charcoal-900 transition-colors group-hover:text-emerald-700">
+          <h3 className="font-display text-xl leading-snug text-charcoal-900 transition-colors group-hover:text-emerald-700">
             {post.title}
           </h3>
           <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-charcoal-500">

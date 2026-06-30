@@ -9,7 +9,7 @@ export function RelatedPosts({ posts }: { posts: BlogPost[] }) {
     <section className="mx-auto max-w-(--container-luxe) px-6 py-16 md:px-10 md:py-24 lg:px-16">
       <Reveal>
         <h2 className="font-display text-3xl text-charcoal-900 md:text-4xl">
-          More from this category
+          More stories
         </h2>
       </Reveal>
       <div className="mt-12">

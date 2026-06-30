@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/hero-section";
-import { CategoryStrip } from "@/components/home/category-strip";
 import { FeaturedGrid } from "@/components/home/featured-grid";
 import { NewsletterBand } from "@/components/home/newsletter-band";
 import { buildMetadata } from "@/lib/seo";
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <CategoryStrip />
       <FeaturedGrid />
       <NewsletterBand />
     </>
