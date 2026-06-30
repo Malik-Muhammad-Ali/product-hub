@@ -6,13 +6,11 @@ import { useState } from "react";
 import { Logo } from "@/components/site/logo";
 import { MobileNav } from "@/components/site/mobile-nav";
 import { PRIMARY_NAV } from "@/lib/constants";
-import { getAllCategoryMeta } from "@/lib/categories";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
-  const categories = getAllCategoryMeta();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 80);
@@ -40,16 +38,6 @@ export function SiteHeader() {
               className="text-sm tracking-wide text-charcoal-700 transition-colors hover:text-emerald-700"
             >
               {item.label}
-            </Link>
-          ))}
-          <span className="h-4 w-px bg-charcoal-900/10" aria-hidden />
-          {categories.slice(0, 4).map((category) => (
-            <Link
-              key={category.slug}
-              href={`/blog?category=${category.slug}`}
-              className="text-sm tracking-wide text-charcoal-700 transition-colors hover:text-emerald-700"
-            >
-              {category.label}
             </Link>
           ))}
         </nav>
