@@ -1,6 +1,6 @@
-# BroCommerce
+# Product Hub
 
-An editorial-luxury blog for BroCommerce — an ecommerce journal covering the products, makers, and ideas worth shopping. Built with Next.js (App Router, TypeScript), Tailwind CSS v4, shadcn/ui, and Framer Motion.
+An editorial-luxury blog for Product Hub — an ecommerce journal covering the products, makers, and ideas worth shopping. Built with Next.js (App Router, TypeScript), Tailwind CSS v4, shadcn/ui, and Framer Motion.
 
 ## Getting Started
 

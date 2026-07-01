@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/site/logo";
-import { PRIMARY_NAV } from "@/lib/constants";
+import { PRIMARY_NAV, SITE_NAME } from "@/lib/constants";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -30,7 +30,7 @@ export function SiteFooter() {
 
       <div className="border-t border-charcoal-900/10">
         <div className="mx-auto max-w-(--container-luxe) px-6 py-5 text-xs text-charcoal-500 md:px-10 lg:px-16">
-          © {year} BroCommerce. All rights reserved.
+          © {year} {SITE_NAME}. All rights reserved.
         </div>
       </div>
     </footer>

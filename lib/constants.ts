@@ -1,7 +1,7 @@
-export const SITE_NAME = "BroCommerce";
+export const SITE_NAME = "Product Hub";
 export const SITE_DESCRIPTION =
-  "BroCommerce is an editorial blog for considered ecommerce — the products, makers, and ideas worth your attention.";
-export const SITE_URL = "https://brocommerce.example.com";
+  "Product Hub is an editorial blog for considered ecommerce — the products, makers, and ideas worth your attention.";
+export const SITE_URL = "https://producthub.example.com";
 
 export const PRIMARY_NAV = [
   { label: "Home", href: "/" },

@@ -5,7 +5,7 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import { Logo } from "@/components/site/logo";
 import { MobileNav } from "@/components/site/mobile-nav";
-import { PRIMARY_NAV } from "@/lib/constants";
+import { PRIMARY_NAV, SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -26,7 +26,7 @@ export function SiteHeader() {
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="mx-auto flex max-w-(--container-luxe) items-center justify-between px-6 md:px-10 lg:px-16">
-        <Link href="/" aria-label={`${"BroCommerce"} home`}>
+        <Link href="/" aria-label={`${SITE_NAME} home`}>
           <Logo />
         </Link>
 

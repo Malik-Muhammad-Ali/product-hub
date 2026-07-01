@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+import { SITE_NAME } from "@/lib/constants";
 
 export function HeroSection() {
   return (
@@ -15,7 +16,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="font-display text-sm tracking-[0.2em] text-emerald-700 uppercase">
-            The BroCommerce Blog
+            The {SITE_NAME} Blog
           </p>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] text-charcoal-900 md:text-6xl">
             Stories worth shopping.

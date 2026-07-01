@@ -8,7 +8,7 @@ export function Logo({ className }: { className?: string }) {
         className
       )}
     >
-      Bro<span className="text-emerald-700">Commerce</span>
+      Product <span className="text-emerald-700">Hub</span>
     </span>
   );
 }
