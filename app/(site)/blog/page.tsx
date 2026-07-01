@@ -5,6 +5,8 @@ import { getAllPosts } from "@/lib/posts";
 import { buildMetadata } from "@/lib/seo";
 import { SITE_NAME } from "@/lib/constants";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = buildMetadata({
   title: "Blogs",
   description: `Every story from the ${SITE_NAME} blog.`,

@@ -9,8 +9,6 @@ export function PostHeader({ post }: { post: BlogPost }) {
         {post.title}
       </h1>
       <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-charcoal-500">
-        <span>{post.author.name}</span>
-        <span aria-hidden>·</span>
         <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
         {post.readingTimeMinutes && (
           <>

@@ -5,15 +5,12 @@ import { PostCarousel } from "@/components/blog/post-carousel";
 import { PostBody } from "@/components/blog/post-body";
 import { PostPriceCta } from "@/components/blog/post-price-cta";
 import { RelatedPosts } from "@/components/blog/related-posts";
-import { getAllSlugs, getPostBySlug, getRelatedPosts } from "@/lib/posts";
+import { getPostBySlug, getRelatedPosts } from "@/lib/posts";
 import { buildArticleJsonLd, buildMetadata, buildProductJsonLd } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+export const revalidate = 60;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
@@ -36,7 +33,7 @@ export default async function PostPage({ params }: { params: Params }) {
 
   const relatedPosts = await getRelatedPosts(post, 3);
   const articleJsonLd = buildArticleJsonLd(post);
-  const productJsonLd = buildProductJsonLd(post);
+  const productJsonLd = post.price != null ? buildProductJsonLd(post) : null;
 
   return (
     <article>
@@ -44,10 +41,12 @@ export default async function PostPage({ params }: { params: Params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
+      {productJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+      )}
 
       <div className="mx-auto max-w-(--container-luxe) px-6 pt-16 md:px-10 md:pt-24 lg:px-16">
         <PostHeader post={post} />

@@ -17,3 +17,11 @@ export function estimateReadingTime(paragraphs: string[]) {
   const words = paragraphs.join(" ").split(/\s+/).filter(Boolean).length
   return Math.max(1, Math.round(words / 220))
 }
+
+export function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+}

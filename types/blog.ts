@@ -5,21 +5,6 @@ export interface PostImage {
   height: number;
 }
 
-export type Category =
-  | "fashion"
-  | "footwear"
-  | "accessories"
-  | "tech"
-  | "home-goods"
-  | "beauty"
-  | "trends";
-
-export interface CategoryMeta {
-  slug: Category;
-  label: string;
-  description: string;
-}
-
 export interface BlogPost {
   id: string;
   slug: string;
@@ -27,15 +12,9 @@ export interface BlogPost {
   excerpt: string;
   body: string[];
   images: PostImage[];
-  category: Category;
-  tags: string[];
-  price: number;
+  price: number | null;
   currency: string;
   externalLink: string;
-  author: {
-    name: string;
-    avatarUrl?: string;
-  };
   publishedAt: string;
   updatedAt?: string;
   featured: boolean;

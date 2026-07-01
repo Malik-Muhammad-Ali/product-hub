@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { BlogPost } from "@/types/blog";
-import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { SITE_AUTHOR_NAME, SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export function buildMetadata({
   title,
@@ -44,7 +44,7 @@ export function buildArticleJsonLd(post: BlogPost) {
     headline: post.title,
     description: post.excerpt,
     image: post.images.map((image) => image.url),
-    author: { "@type": "Person", name: post.author.name },
+    author: { "@type": "Organization", name: SITE_AUTHOR_NAME },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
     mainEntityOfPage: {
