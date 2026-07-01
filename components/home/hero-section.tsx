@@ -21,8 +21,8 @@ export function HeroSection() {
             Stories worth shopping.
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-charcoal-700">
-            A considered edit of the products, makers, and ideas shaping how people shop —
-            written for readers who&apos;d rather buy one thing well than ten things fast.
+            A considered edit of the products, makers, and ideas shaping how people shop.
+            Written for readers who&apos;d rather buy one thing well than ten things fast.
           </p>
           <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="mt-10 inline-block">
             <Button
