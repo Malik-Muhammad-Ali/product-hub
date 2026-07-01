@@ -1,14 +1,17 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { formatPrice } from "@/lib/utils";
 import type { BlogPost } from "@/types/blog";
 
 export function PostPriceCta({ post }: { post: BlogPost }) {
   return (
     <aside className="h-fit w-full rounded-sm border border-charcoal-900/10 bg-cream-100 p-6 lg:sticky lg:top-28">
-      <p className="text-xs tracking-wide text-charcoal-500 uppercase">Price</p>
-      <p className="mt-3 font-display text-3xl text-charcoal-900">
-        {formatPrice(post.price, post.currency)}
+      <div className="flex items-center gap-2 text-emerald-700">
+        <Sparkles className="size-4" />
+        <p className="text-xs tracking-wide uppercase">Featured Product</p>
+      </div>
+      <p className="mt-3 font-display text-xl leading-snug text-charcoal-900">{post.title}</p>
+      <p className="mt-2 text-sm text-charcoal-500">
+        Discover the piece behind this story.
       </p>
       <Button
         render={
