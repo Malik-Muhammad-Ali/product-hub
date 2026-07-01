@@ -20,7 +20,7 @@ export function NewsletterBand() {
     <section className="bg-emerald-900">
       <Reveal className="mx-auto max-w-(--container-luxe) px-6 py-16 text-center md:px-10 md:py-24 lg:px-16">
         <h2 className="font-display text-3xl text-cream-50 md:text-4xl">
-          Join the journal.
+          Join the blog.
         </h2>
         <p className="mx-auto mt-3 max-w-md text-emerald-100">
           One considered email a week. No noise, no spam, unsubscribe anytime.

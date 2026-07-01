@@ -15,7 +15,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="font-display text-sm tracking-[0.2em] text-emerald-700 uppercase">
-            The BroCommerce Journal
+            The BroCommerce Blog
           </p>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] text-charcoal-900 md:text-6xl">
             Stories worth shopping.
@@ -31,7 +31,7 @@ export function HeroSection() {
               size="lg"
               className="bg-emerald-900 px-6 text-cream-50 hover:bg-emerald-900/90"
             >
-              Read the journal
+              Read the blogs
             </Button>
           </motion.div>
         </motion.div>

@@ -9,14 +9,14 @@ export default function PostNotFound() {
         We couldn&apos;t find that story.
       </h1>
       <p className="mt-4 max-w-md text-charcoal-500">
-        It may have been moved or unpublished. Explore the rest of the journal instead.
+        It may have been moved or unpublished. Explore the rest of the blogs instead.
       </p>
       <Button
         render={<Link href="/blog" />}
         nativeButton={false}
         className="mt-8 bg-emerald-900 text-cream-50 hover:bg-emerald-900/90"
       >
-        Back to the journal
+        Back to the blogs
       </Button>
     </div>
   );

@@ -10,14 +10,14 @@ export default function NotFound() {
       </h1>
       <p className="mt-4 max-w-md text-charcoal-500">
         The page you&apos;re looking for doesn&apos;t exist or has moved. Let&apos;s get you back
-        to the journal.
+        to the blogs.
       </p>
       <Button
         render={<Link href="/blog" />}
         nativeButton={false}
         className="mt-8 bg-emerald-900 text-cream-50 hover:bg-emerald-900/90"
       >
-        Browse the journal
+        Browse the blogs
       </Button>
     </div>
   );

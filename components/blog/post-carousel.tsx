@@ -30,7 +30,7 @@ export function PostCarousel({ images, title }: { images: PostImage[]; title: st
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-xl">
+    <div className="max-w-sm">
       <Carousel
         setApi={setApi}
         opts={{ loop: true, align: "start", duration: shouldReduceMotion ? 0 : 25 }}
@@ -48,7 +48,7 @@ export function PostCarousel({ images, title }: { images: PostImage[]; title: st
                   src={image.url}
                   alt={image.alt || `${title} — image ${index + 1}`}
                   fill
-                  sizes="(max-width: 768px) 100vw, 576px"
+                  sizes="(max-width: 768px) 100vw, 384px"
                   priority={index === 0}
                   className="object-cover"
                 />

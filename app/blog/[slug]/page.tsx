@@ -54,14 +54,14 @@ export default async function PostPage({ params }: { params: Params }) {
       </div>
 
       <div className="mx-auto mt-10 max-w-(--container-luxe) px-6 md:px-10 lg:px-16">
-        <PostCarousel images={post.images} title={post.title} />
+        <div className="flex flex-col gap-10 lg:flex-row">
+          <PostCarousel images={post.images} title={post.title} />
+          <PostPriceCta post={post} />
+        </div>
       </div>
 
       <div className="mx-auto max-w-(--container-luxe) px-6 py-16 md:px-10 md:py-24 lg:px-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_320px]">
-          <PostBody paragraphs={post.body} />
-          <PostPriceCta post={post} />
-        </div>
+        <PostBody paragraphs={post.body} />
       </div>
 
       <RelatedPosts posts={relatedPosts} />

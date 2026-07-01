@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className="mt-2 max-w-[32ch] text-sm text-charcoal-500">
-            An editorial journal for considered ecommerce.
+            An editorial blog for considered ecommerce.
           </p>
         </div>
 

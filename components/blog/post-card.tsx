@@ -28,7 +28,7 @@ export function PostCard({ post, priority = false }: { post: BlogPost; priority?
 
           <div className="mt-4 flex items-center justify-between border-t border-charcoal-900/10 pt-3">
             <span className="inline-flex items-center gap-1.5 text-sm text-emerald-700">
-              Read the story
+              Read Complete Blog
               <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
             <span className="text-xs text-charcoal-500">
