@@ -54,9 +54,13 @@ export default async function PostPage({ params }: { params: Params }) {
       </div>
 
       <div className="mx-auto mt-10 max-w-(--container-luxe) px-6 md:px-10 lg:px-16">
-        <div className="flex flex-col gap-10 lg:flex-row">
-          <PostCarousel images={post.images} title={post.title} />
-          <PostPriceCta post={post} />
+        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
+          <div className="lg:w-[60%]">
+            <PostCarousel images={post.images} title={post.title} />
+          </div>
+          <div className="lg:w-[20%]">
+            <PostPriceCta post={post} />
+          </div>
         </div>
       </div>
 

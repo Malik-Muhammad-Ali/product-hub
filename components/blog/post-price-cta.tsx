@@ -5,7 +5,7 @@ import type { BlogPost } from "@/types/blog";
 
 export function PostPriceCta({ post }: { post: BlogPost }) {
   return (
-    <aside className="h-fit w-full rounded-sm border border-charcoal-900/10 bg-cream-100 p-6 sm:w-72 lg:sticky lg:top-28">
+    <aside className="h-fit w-full rounded-sm border border-charcoal-900/10 bg-cream-100 p-6 lg:sticky lg:top-28">
       <p className="text-xs tracking-wide text-charcoal-500 uppercase">Referenced in this story</p>
       <p className="mt-3 font-display text-3xl text-charcoal-900">
         {formatPrice(post.price, post.currency)}
