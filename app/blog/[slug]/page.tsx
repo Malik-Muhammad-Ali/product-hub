@@ -58,7 +58,7 @@ export default async function PostPage({ params }: { params: Params }) {
           <div className="lg:w-[60%]">
             <PostCarousel images={post.images} title={post.title} />
           </div>
-          <div className="lg:w-[20%]">
+          <div className="lg:w-[28%]">
             <PostPriceCta post={post} />
           </div>
         </div>
